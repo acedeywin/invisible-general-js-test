@@ -1,5 +1,5 @@
 {
     "prettier.semi": false,
-    "prettier.useEditorConfig": false,
+    "prettier.useEditorConfig": true,
     "prettier.ignorePath": ""
 }
