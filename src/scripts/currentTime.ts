@@ -2,7 +2,7 @@ import { API_KEY } from './utils'
 import axios from 'axios'
 axios.defaults
 
-export const getCurrentTime = (locationName: string | undefined) => {
+export const getCurrentTime = (locationName: string) => {
 
 const url: string = `http://api.openweathermap.org/data/2.5/weather?q=${locationName}&appid=${API_KEY}`
 
@@ -14,7 +14,7 @@ const url: string = `http://api.openweathermap.org/data/2.5/weather?q=${location
                 let time = new Date(response.data.dt),
                     hours: any = time.getHours(),
                     minutes: any = time.getMinutes(),
-                    currentTime
+                    currentTime = ''
                 
                 switch (true) {
 
@@ -45,6 +45,6 @@ const url: string = `http://api.openweathermap.org/data/2.5/weather?q=${location
             let errorMessage = {
                 message: error.message
             } 
-            console.log(errorMessage);
+            console.log(errorMessage)
         })
 }
