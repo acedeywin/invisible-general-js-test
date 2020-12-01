@@ -12,7 +12,7 @@ const getCurrentTime = (locationName) => {
     axios_1.default.get(url)
         .then(response => {
         if (response.status === 200) {
-            let time = new Date(response.data.dt), hours = time.getHours(), minutes = time.getMinutes(), currentTime;
+            let time = new Date(response.data.dt), hours = time.getHours(), minutes = time.getMinutes(), currentTime = '';
             switch (true) {
                 case minutes < 10:
                     minutes = `0${minutes}`;

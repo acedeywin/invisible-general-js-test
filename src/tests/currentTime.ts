@@ -3,13 +3,11 @@ import { expect } from 'chai'
 
 describe('weather', () => {
 
-    it('should take in two parameters', () => {
-        let locationName,
+    it('should take in one parameter', () => {
+        let locationName = '',
             testGetCurrentTime = getCurrentTime(locationName)
         
-        expect(testGetCurrentTime).to.be.undefined;
+        expect(testGetCurrentTime).to.be.undefined
 
     })
 })
-
-//testGetCurrentTime.getCurrentTime(currentTime)).to.be.a('string'
