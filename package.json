@@ -1,0 +1,28 @@
+{
+  "name": "invisible-js-test",
+  "version": "1.0.0",
+  "description": "\"# invisible-general-js-test\"",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "mocha --require ts-node/register --watch-extension ts 'src/tests/**/*.ts'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/acedeywin/invisible-general-js-test.git"
+  },
+  "author": "Stephen Okpalaononuju",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/acedeywin/invisible-general-js-test/issues"
+  },
+  "homepage": "https://github.com/acedeywin/invisible-general-js-test#readme",
+  "dependencies": {
+    "@types/chai": "^4.2.14",
+    "@types/mocha": "^8.0.4",
+    "chai": "^4.2.0",
+    "mocha": "^8.2.1",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.1.2"
+  }
+}
