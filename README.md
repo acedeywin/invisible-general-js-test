@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/acedeywin/invisible-general-js-test.svg?branch=develop)](https://travis-ci.com/acedeywin/invisible-general-js-test)
+
 # Invisible General JS Test 
 
 # Task
