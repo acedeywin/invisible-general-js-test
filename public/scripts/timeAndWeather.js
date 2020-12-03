@@ -10,22 +10,27 @@ const currentTime_1 = require("./currentTime");
 axios_1.default.defaults;
 const logCurrentTimeAndWeather = (locationName, postalCode, countryCode) => {
     const url = `http://api.openweathermap.org/data/2.5/weather?zip=${postalCode},${countryCode}&appid=${utils_1.API_KEY}&units=imperial`;
-    axios_1.default.get(url)
+    axios_1.default
+        .get(url)
         .then(response => {
         if (response.status === 200) {
             if (locationName === response.data.name) {
                 currentTime_1.getCurrentTime(locationName);
                 let weather = {
                     main: response.data.weather[0].main,
-                    description: response.data.weather[0].description
+                    description: response.data.weather[0].description,
                 };
                 console.log(weather);
             }
         }
+        else {
+            let error = new Error(`${locationName} doesn't match any location. Please try a valid input.`);
+            console.log(error);
+        }
     })
         .catch(error => {
         let errorMessage = {
-            message: error.message
+            message: error.message,
         };
         console.log(errorMessage);
     });
